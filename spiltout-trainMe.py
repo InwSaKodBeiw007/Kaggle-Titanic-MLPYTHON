@@ -3,10 +3,11 @@ from sklearn import tree
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 # pointed to train.csv
 src = pd.read_csv("Dataset-Titanic/train.csv")
-
+#   checking by graph i think this so fine to use let try another time
 # sns.countplot(x="Sex",data=src)
 # plt.show()
 
@@ -26,14 +27,18 @@ y = locked_test
 data_train_X,data_test_Y,target_train_X,target_test_Y = train_test_split(x,y,test_size=0.33,random_state=42)    # mentioned importมาจาก sklearn.model_selection
 #                     train_test_split("data","target",test_size=0.33,random_state=42)    mentioned test_size= , random_state= 
 
- 
+#   DecisionTreeClassifier
 model = tree.DecisionTreeClassifier()
 model.fit(data_train_X,target_train_X)
 
+#   prediction  go get percent% for me
 # print(f"Y{y_test}   ")
-# print(model.predict(y_train))
+# print(model.predict(data_test_Y))
+pppdd = model.predict(data_test_Y)
 
 print(model.score(data_test_Y,target_test_Y))
+acc = accuracy_score(pppdd,target_test_Y)
+print(acc)
 
 
 
