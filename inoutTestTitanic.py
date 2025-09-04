@@ -20,7 +20,14 @@ train_target = src.drop(src.index[6]).loc[:,"Survived"]     #.loc[จะต้�
 ## Model
 model_train = tree.DecisionTreeClassifier()
 model_train.fit(train_data,train_target)
+# print(model_train.predict(test_data).map({0:"Dead",1:"Survival"})) ## I cant do this shi
 print(model_train.predict(test_data))
+
+
+#   //  Done!
+
+
+
 
 # // just for checking
 # print(test_data)
@@ -32,9 +39,9 @@ print(model_train.predict(test_data))
 # print(train_data.head())
 # print(type(train_data.head()))
 
-for i,zeries in train_data.head().iterrows():
+# for i,zeries in train_data.head().iterrows():
     # model_train.predict([zeries])
-    print(model_train.predict(train_data.iloc[[i]]))
+    # print(model_train.predict(train_data.iloc[[i]]))
 
     # print(zeries)       # type = series ใช้ predict ไม้ได้  :  Age    22.0 Sex     0.0  Name: 0, dtype: float64
     # print([zeries])     # type = list                   : [Age    22.0    Sex     0.0 Name: 0, dtype: float64]
@@ -70,4 +77,4 @@ for i,zeries in train_data.head().iterrows():
     # print(row)  #    Age  Sex   0  22.0  0.0
 
 #   check if what wrong :: how ever THIS IS OVERFITTING i mean not sure to be sure
-print(src.drop(6).head())   # everything alright
+# print(src.drop(6).head())   # everything alright
