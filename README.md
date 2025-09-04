@@ -1,11 +1,11 @@
 # ~~first model Machine learning~~
 this compare data between kaggle's data i mean, so that will let the model choose this 0 for sure because he know by the data you've train 0,0 is 1 then if not 0,0 he will think its 0 ><
 
-## `**inoutTestTitanic.py**`
+## *`inoutTestTitanic.py`*
 this file i check how predict() will come if thats data is no along in the train_data.
 so its coming nice tho! i will test this mechanic in real test.csv that come from kiggle.
 
-##  `**spiltout-trainMe.py**`
+##  *`spiltout-trainMe.py`*
 is way cool to split ur datasets after u cleansing them, then 
 train_test_split will do the job for u.
 
@@ -18,3 +18,13 @@ a_data,b_data,a_target,b_target = train_test_split(a,b)
 ```
 data, data, target, target | y'all can see these magics!! <3 
 >  Affirmative, love it! 🪖
+
+
+## *`titanic_dicisiontree.py`*
+I trained my DecisionTreeClassifier() to it peak but now i know 
+####  features engineer
+is more interesting to learn next, i just can cleansing data just simple thing on it.
+More than anything i got my first MachineLearning 
+> 🤖 SCORE: 0.722
+
+I know it not that much but i will looking forward to pactice more
